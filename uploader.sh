@@ -34,7 +34,7 @@ fi
     --error-on-no-transfer
 
 # Increment the service account index
-gdsa_index=$((current_file+1))
+gdsa_index=$((gdsa_index+1))
 
 # If the next service account index is greater than the number of files, set it back to 1
 if [[ $gdsa_index -gt $num_files ]]; then
