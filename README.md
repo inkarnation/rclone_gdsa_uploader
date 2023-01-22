@@ -12,6 +12,7 @@ chmod +x rclone_gdsa_uploader/uploader.sh
 Place your service account configurations in `rclone_gdsa_uploader/service_accounts` or in the directory configured in `sa_dir`. The service accounts need to be structured in incrementing `.json` files (e.g. `1.json`, `2.json`, ...).
 
 You might configure a cronjob with e.g. `crontab -e` like (Using flock to prevent parallel executions):
+
 `*/15 * * * * /usr/bin/flock -n /tmp/rclone.lockfile /root/rclone_gdsa_uploader/uploader.sh`
 
 Modify `/root/rclone_gdsa_uploader/uploader.sh` to match the path to your cloned repository.
