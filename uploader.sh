@@ -22,7 +22,7 @@ else
     gdsa_index=$(cat $currend_gdsa_file)
 fi
 
-/usr/bin/rclone move $local_dir $rclone_mount \
+/usr/bin/rclone move $local_dir $rclone_mount_name \
     --config $rclone_config \
     --log-file $log_file \
     --log-level INFO \
