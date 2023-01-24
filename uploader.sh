@@ -1,7 +1,8 @@
 #!/bin/bash
 
-sa_dir=$(pwd)"/service_accounts"                                # Directory containing the service accounts
-currend_gdsa_file=$(pwd)"/current_gdsa"                         # File to keep track of last used service account
+script_dir=$(dirname "$(readlink -f "$0")")
+sa_dir=$script_dir"/service_accounts"                                # Directory containing the service accounts
+currend_gdsa_file=$script_dir"/current_gdsa"                         # File to keep track of last used service account
 local_dir="/mnt/gmedia-local"                                   # Directory containing files to upload
 rclone_config="/root/.config/rclone/rclone.conf"           # rclone config file
 rclone_mount_name="gdrive-crypt:"                               # rclone mount name
